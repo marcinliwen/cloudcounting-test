@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arbutus Slab', serif;
+    font-size: 16px;
+    line-height: 22px;
+    color:#000;    
+}
+body, html{
+    margin: 0px;
+    padding: 0px
+}

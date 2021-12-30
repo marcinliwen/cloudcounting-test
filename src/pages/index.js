@@ -6,9 +6,10 @@ import { graphql } from "gatsby"
 
 // markup
 const IndexPage = ({data}) => {
+  console.log(data)
   return (
   <Layout>
-    <Hero img={data} success={false} />
+    <Hero hero={data.hero} cover={data.cover} />
   </Layout>
   )
 }
@@ -17,9 +18,14 @@ export default IndexPage
 
 export const pageQuery = graphql `
 query MyQuery {
-  file(relativePath: {eq: "aircraft.jpg"}) {
+  hero:file(relativePath: {eq: "aircraft.jpg"}) {
     childImageSharp {
       gatsbyImageData(layout: CONSTRAINED)
     }
   }
+  cover:file(relativePath: {eq: "ebook.png"}) {
+    childImageSharp {
+      gatsbyImageData(layout: CONSTRAINED)
+    }
+  } 
 }`

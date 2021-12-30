@@ -68,6 +68,7 @@ p{
     }
     .hero-text-wrapper {
         padding: 20px;
+        flex-wrap: wrap;
     }
     
     .hero-container {

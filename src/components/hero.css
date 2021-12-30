@@ -5,9 +5,10 @@
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
+    padding: 5% 0 0 15%;
 }
 .hero-img{
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0;
     height: 100%;
@@ -19,6 +20,8 @@
     position: relative;
     background: #4cc6fd94;
     border-radius: 180px 0 0 0;
+   width: 100%;
+   height: 100%;
 }
 .hero-img .gatsby-image-wrapper{
     position: absolute;
@@ -28,14 +31,36 @@
     left: 0px;
 }
 .hero-text-wrapper {
-    max-width: 980px;
+    max-width: 800px;
     padding: 44px 20px 20px 120px;
 }
 h2{
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 5rem;
 }
 p{
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+@media(max-width: 690px){
+    h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .hero-text-wrapper {
+        padding: 20px;
+    }
+    
+    .hero-container {
+        padding: 5% 0 0 5%;
+    }
+    
+    
+    .hero-tex-container {
+        border-radius: 44px 0 0 0;
+    }
 }

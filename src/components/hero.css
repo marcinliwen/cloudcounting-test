@@ -16,6 +16,17 @@
     top: 0;
     z-index: 0;
 }
+.hero-img:before {
+    content: "";
+    display: block;
+    background: #3ab2ffe8;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .hero-tex-container{
     position: relative;
     border-radius: 180px 0 0 0;
@@ -47,11 +58,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: -4px 4px 6px 0px #00000070, 3px 1px 6px #00000078;
 }
 .ero-form-wrapper h4 {
     font-weight: 400;
     font-size: 1.5rem;
     margin: 0;
+}
+.hero-cover {
+    box-shadow: -4px 4px 6px 0px #00000070, 3px 1px 6px #00000078;
 }
 h2{
     font-size: 3rem;
@@ -80,10 +95,11 @@ p{
     .hero-text-wrapper {
         padding: 20px;
         flex-wrap: wrap;
+        justify-content: center;
     }
     
     .hero-container {
-        padding: 5% 0 0 5%;
+        padding: 0;
     }
     
     

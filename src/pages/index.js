@@ -25,7 +25,10 @@ query MyQuery {
   }
   cover:file(relativePath: {eq: "ebook.png"}) {
     childImageSharp {
-      gatsbyImageData(layout: CONSTRAINED)
+      gatsbyImageData(
+        width: 260, 
+        layout: FIXED
+        )
     }
   } 
 }`

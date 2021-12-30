@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 
-const Hero = ({img}) =>{
+const Hero = ({img, success}) =>{
     
 return(
     <div className="hero-container">
@@ -16,7 +16,9 @@ return(
             <div className="hero-text-wrapper">
             <h2>Przygotowaliśmy coś specjalnie dla Ciebie!</h2>
             <p>Pobierz bezpłatny ebook - który zwięźle opisuje zmiany w podatkach na <b>2022</b> które czekają każdego przedsiębiorcę.</p>
-            <Subscribe />
+            {success ? 'Dziękujemy'
+            :<Subscribe />
+}
             </div>
             
         </div>

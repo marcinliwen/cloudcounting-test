@@ -8,7 +8,7 @@ import { graphql } from "gatsby"
 const IndexPage = ({data}) => {
   return (
   <Layout>
-    <Hero img={data} />
+    <Hero img={data} success={false} />
   </Layout>
   )
 }

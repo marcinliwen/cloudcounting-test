@@ -1,9 +1,9 @@
 import * as React from 'react'
 import './button.css'
 
-const Button = () =>{
+const Button = ({children}) =>{
     return(
-        <bytton></bytton>
+        <bytton>{children}</bytton>
     )
 }
 

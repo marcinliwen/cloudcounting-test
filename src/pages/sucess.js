@@ -2,26 +2,23 @@ import * as React from "react"
 import Layout from '../components/Layout'
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import Video from "../components/Video"
 // markup
 const IndexPage = ({data}) => {
   return (
   <Layout>
-    <div className="hero-container">
+    <div className="hero-container success">
+        
         <div className="hero-img">
         <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
         </div>
         <div className="hero-tex-container">
             <div className="hero-text-wrapper">
-            <h2>Skoro wiesz już o nas więcej - pozwól teraz pokazać co potrafimy.</h2>
-            <p>Umów się na BEZPŁATNE spotkanie wstępne - które pozwoli nam bliżej poznać Twoje potrzeby. Poniżej dostępny link - do naszego kalendarza online - gdzie możesz zabukować wygodny dla Ciebie termin.</p>
-            <h4>UWAGA: jeśli zdecydujesz się na nasze usługi do końca tygodnia - to:</h4>
-
-<ol>
-  <li>Przeniesienie całej dokumentacji wraz z audytem wstępnym - otrzymasz GRATIS</li>
-  <li>Pierwszy miesiąc obsługi GRATIS!</li>
-</ol>
-<a href="" className="btn">Umów spotkanie</a>
+              <Video />
+            <h3>Skoro wiesz już o nas więcej - pozwól teraz pokazać co potrafimy.</h3>
+            <p>Umów się na BEZPŁATNE spotkanie wstępne - które pozwoli nam bliżej poznać Twoje potrzeby.</p>
+            
+<a href="https://calendly.com/cloudcounting/spotkanie-wstepne" className="btn">Umów spotkanie</a>
             </div>
             
         </div>

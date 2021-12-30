@@ -96,6 +96,10 @@ p{
 h3 {
     font-size: 2rem;
     line-height: 2.5rem;
+    text-shadow: 4px 3px black;
+}
+.btn img {
+    margin-right: 12px;
 }
 @media(max-width: 690px){
     h2 {

@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Video from "../components/Video"
+import CalendarIcon from '../images/calendar.png'
 // markup
 const IndexPage = ({data}) => {
   return (
@@ -18,7 +19,7 @@ const IndexPage = ({data}) => {
             <h3>Skoro wiesz już o nas więcej - pozwól teraz pokazać co potrafimy.</h3>
             <p>Umów się na BEZPŁATNE spotkanie wstępne - które pozwoli nam bliżej poznać Twoje potrzeby.</p>
             
-<a href="https://calendly.com/cloudcounting/spotkanie-wstepne" className="btn">Umów spotkanie</a>
+<a href="https://calendly.com/cloudcounting/spotkanie-wstepne" className="btn"><img src={CalendarIcon} width="24px"/>Umów spotkanie</a>
             </div>
             
         </div>

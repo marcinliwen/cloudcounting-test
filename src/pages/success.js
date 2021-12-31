@@ -4,8 +4,31 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Video from "../components/Video";
 import CalendarIcon from "../images/calendar.png";
+import Modal from 'react-modal';
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    height: '80vh',
+    maxWidth: '100%',
+    width: '900px',
+    padding: '0',
+    zIndex: '1000'
+  },
+};
+
 // markup
 const IndexPage = ({ data }) => {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <Layout>
       <div className="hero-container success">
@@ -23,15 +46,24 @@ const IndexPage = ({ data }) => {
               poznać Twoje potrzeby.
             </p>
 
-            <a
-              href="https://calendly.com/cloudcounting/spotkanie-wstepne"
+            <button
+              //href="https://calendly.com/cloudcounting/spotkanie-wstepne"
               className="btn"
-              target="popup" 
-              onClick={()=>window.open('https://calendly.com/cloudcounting/spotkanie-wstepne','popup','width=600,height=600') }
+              onClick={()=>setIsOpen(true)}
             >
               <img src={CalendarIcon} width="24px" />
               Umów spotkanie
-            </a>
+            </button>
+            <Modal
+              isOpen={modalIsOpen}
+              //onAfterOpen={afterOpenModal}
+              onRequestClose={closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+              
+            >
+               <iframe className="modal" src="https://calendly.com/cloudcounting/spotkanie-wstepne" />
+            </Modal>
           </div>
         </div>
       </div>

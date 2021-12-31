@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 *{
     box-sizing: border-box;
 }
 body {
-    font-family: 'Arbutus Slab', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 22px;
     color:#000;    
@@ -33,6 +33,7 @@ input {
     display: block;
     text-align: center;
     max-width: fit-content;
+    font-weight: 700;
 }
 .btn:hover {
     box-shadow: 1px 3px 3px #000;

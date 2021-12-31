@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Video from "../components/Video";
 import CalendarIcon from "../images/calendar.png";
 import Modal from 'react-modal';
+import Close from '../images/close.svg'
 
 const customStyles = {
   content: {
@@ -62,6 +63,7 @@ const IndexPage = ({ data }) => {
               contentLabel="Example Modal"
               
             >
+              <div className="modal-header"> <button onClick={()=>setIsOpen(false)}><img src={Close} /></button></div>
                <iframe className="modal" src="https://calendly.com/cloudcounting/spotkanie-wstepne" />
             </Modal>
           </div>

@@ -11,7 +11,7 @@ const Subscribe = () => {
     fetch(`.netlify/functions/cloudcount?email=${email}`)
       .then((res) => res.json())
       .then((json) => setEmail(json.email))
-      .then(navigate("/sucess"));
+      .then(navigate("/success"));
   };
   return (
     <form onSubmit={submitHandler}>
